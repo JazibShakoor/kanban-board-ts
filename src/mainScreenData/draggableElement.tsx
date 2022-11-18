@@ -1,7 +1,7 @@
 import { Droppable } from "react-beautiful-dnd";
 import React from "react";
 import classes from './homePage.module.css'
-import Context from "../Components/innerText";
+import InnerText from "../Components/innerText";
 import Editable from "../Components/editTable";
 
 interface TodoListProps {
@@ -47,7 +47,7 @@ const DraggableElement: React.FC<TodoListProps> = (props) => {
                             onSubmit={addItem}
                         />
                         {props.elements.map((item, index) => (
-                            <Context key={item.id} listid={props.idTitle} item={item} index={index} updated={onUpdatedData} />
+                            <InnerText key={item.id} listid={props.idTitle} item={item} index={index} updated={onUpdatedData} />
                         ))}
                         {provided.placeholder}
                     </div>
