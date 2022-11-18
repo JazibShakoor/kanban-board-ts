@@ -14,7 +14,7 @@ interface listProps {
     updated: (enteredValue: string, listid: string, itemid: string) => void;
 }
 
-const Context: React.FC<listProps> = ({ item, updated, listid, index }) => {
+const InnerText: React.FC<listProps> = ({ item, updated, listid, index }) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const onUpdate = () => {
         const enteredValue = inputRef.current!.value;
@@ -59,4 +59,4 @@ const Context: React.FC<listProps> = ({ item, updated, listid, index }) => {
     )
 };
 
-export default Context;
+export default InnerText;
