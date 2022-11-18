@@ -11,7 +11,7 @@ interface extractedData {
   id: string,
 }
 
-const Container: React.FC = () => {
+const HomePage: React.FC = () => {
     const [listItems, setListItems] = useState(JSON.parse(localStorage.getItem("data") || '') || demoData);
 
     useEffect(() => {
@@ -108,4 +108,4 @@ const Container: React.FC = () => {
     )
 };
 
-export default Container;
+export default HomePage;
