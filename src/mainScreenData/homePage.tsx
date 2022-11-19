@@ -12,7 +12,8 @@ interface extractedData {
 }
 
 const HomePage: React.FC = () => {
-    const [listItems, setListItems] = useState(JSON.parse(localStorage.getItem("data") || '') || demoData);
+    const dataStorage = `${localStorage.getItem("data")}`;
+    const [listItems, setListItems] = useState(JSON.parse(dataStorage) || demoData);
 
     useEffect(() => {
       // Check browser support
